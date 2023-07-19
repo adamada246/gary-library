@@ -1,6 +1,6 @@
 import java.io.InputStream;
 import java.util.Scanner;
-//Build 4
+//Build 5
 class Gary {
 	private Scanner gary;
 
@@ -14,19 +14,14 @@ class Gary {
 		gary = new Scanner(source);
 	}
 	public int getBuild() {
-		return 4;
+		return 5;
 	}
-	public boolean isGary(String n) {
-		if (n.toLowerCase().contains("gary")) {
-			return true;
-		}
-		return false;
+	public static boolean isGary(String n) {
+		return n.toLowerCase().contains("gary");
 	}
-
 	public void destroyGary(Scanner gary) {
 		gary.close();
 	}
-
 	public Scanner birthGary(Scanner gary) {
 		return gary.reset();
 	}
@@ -36,7 +31,6 @@ class Gary {
 	public Scanner getGary() {
 		return gary;
 	}
-
 	public void setGary(Scanner g) {
 		gary = g;
 	}
